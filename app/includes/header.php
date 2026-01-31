@@ -83,12 +83,18 @@ $isAdmin = isset($_SESSION['admin']) && $_SESSION['admin'] === true;
     }
 
     .dropdown-content a {
-        color: black;
+        color: var(--primary-color);
         padding: 12px 16px;
         text-decoration: none;
         display: block;
         text-align: left;
+		font-weight: bold;
     }
+
+	.dropdown-content a:hover {
+		background-color: var(--primary-color);
+		color: white;
+	}
 
     .dropdown-content a:hover {
         background-color: #ddd;
@@ -168,7 +174,7 @@ $isAdmin = isset($_SESSION['admin']) && $_SESSION['admin'] === true;
             </div>
 
         <?php else: ?>
-            <button class="header_button" onclick="window.location.href='index.php'">Accueil</button>
+            <button class="header_button" onclick="window.location.href='accueil.php'">Accueil</button>
             <button class="header_button" onclick="window.location.href='index.php#Assos'">Qui sommes nous ?</button>
             <button class="header_button" onclick="window.location.href='mailto:Gcncotentin@gmail.com'">Nous Contacter</button>
             <button class="header_button" onclick="window.location.href='index.php'">Connexion</button>
