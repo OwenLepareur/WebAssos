@@ -32,7 +32,7 @@ $isAdmin = isset($_SESSION['admin']) && $_SESSION['admin'] === true;
             <button class="header_button" onclick="window.location.href='index.php'">Accueil</button>
             <button class="header_button" onclick="window.location.href='index.php#Assos'">Qui sommes nous ?</button>
             <button class="header_button" onclick="window.location.href='mailto:Gcncotentin@gmail.com'">Nous Contacter</button>
-            <button class="header_button" onclick="window.location.href='login.php'">Connexion</button>
+            <button class="header_button" onclick="window.location.href='index.php'">Connexion</button>
         <?php endif; ?>
 
     </div>
