@@ -1,307 +1,243 @@
+:root {
+    --primary-color: rgb(97, 0, 0);
+    --bg-color: rgb(235, 215, 205);
+    --text-white: #fff;
+}
+
 body {
-    border: none;
     margin: 0;
     padding: 0;
-    background-color: rgb(235, 215, 205);
+    background-color: var(--bg-color);
+    font-family: Arial, sans-serif;
 }
 
-p{
-    text-align: justify;
-    font-size: 20px;
-}
-
-li{
-    text-align: justify;
-    font-size: 20px;
-}
-
-h1{
-    font-size: 70px;
-    text-align: center;
+h1, h2, h3, #MainTitle {
+    font-size: 32px;
+    font-weight: bold;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
 }
 
-h2{
-    font-size: 50px;
+#MainTitle {
+    color: var(--text-white);
+    margin: 0;
+    padding-left: 20px;
 }
 
-.IMGFiller{
-    max-width: 100%;
+#Discover h2 {
+    font-size: 22px;
+    font-weight: normal;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
 }
 
-#MainLogo{
-    max-height: 100%;
-    align-self: left;
+p, li {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.5;
 }
 
-#MainTitle{
-    color: white;
-    font-size: 50px;
+a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.HoriSepLine{
+.HoriSepLine {
     width: 100%;
     height: 5px;
-    background-color: rgb(97, 0, 0);
+    background-color: var(--primary-color);
+    margin: 10px 0;
 }
 
-.Vertical_Sep{
-    width: 2vh;
+.IMGFiller {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
 }
 
-.Horizontal_Sep{
-    height: 2vh;
-    background-color: rgba(255, 255, 255, 0);
+.ico {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-left: 10px;
 }
 
-#presse{
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    max-width: 90%;
-    display: flex;
-    justify-self: center;
-}
-
-#header{
-    background-color: rgb(97, 0, 0);
-    height: 15vh;
-    padding-right: 5vh;
+#header {
+    background-color: var(--primary-color);
+    height: 120px;
+    padding: 0 5vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 2vh;
 }
 
-.header_button{
-    height: 5vh;
-    width: 15vh;
-    background-color: rgb(97, 0, 0);
-    border-color: white;
-    border-style: solid;
-    border-color: rgb(255, 255, 255);
-    border-radius: 50vh;
-    color: white;
-    transition: .2s;
-}
-
-.header_button:hover{
-    background-color: rgb(255, 255, 255);
-    color: rgb(97, 0, 0);
-
-}
-
-#Accueil{
-    margin-left: 10vh;
-    margin-right: 10vh;
-}
-
-#Actus{
-    margin-left: 10vh;
-    margin-right: 10vh;
-}
-
-#Discover{
-    margin-left: 10vh;
-    margin-right: 10vh;
-}
-
-#Assos{
-    margin-left: 10vh;
-    margin-right: 10vh;
-}
-
-#Boutique{
-    margin-left: 10vh;
-    margin-right: 10vh;
-}
-
-#TalkAboutUs{
-    margin-left: 10vh;
-    margin-right: 10vh;
-}
-
-#News{
-    padding-top: 3vh;
-    padding-bottom: 3vh;
+.header-left {
     display: flex;
     align-items: center;
+    height: 100%;
+}
+
+#MainLogo {
+    height: 90%;
+    width: auto;
+}
+
+.header_button {
+    height: 40px;
+    padding: 0 20px;
+    background-color: var(--primary-color);
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+
+.header_button:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+#Accueil, #Actus, #Discover, #Assos, #Boutique, #TalkAboutUs {
+    margin: 0 10vh;
+    padding-bottom: 30px;
+}
+
+#News {
+    display: flex;
     justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
 }
 
-#Main_News{
-    background-color: rgba(255, 0, 0, 0);
-    height : 80vh;
-    width: 80vh;
+#Main_News {
+    width: 600px;
+    height: 600px;
 }
 
-#Main_News .Info{
-    width: inherit;
-    height: inherit;
+#Secondary_News {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 600px;
+    height: 600px;
 }
 
-.Info{
-    background-size: 100%;
+#Secondary_News .Info {
+    height: 48%;
+}
+
+.Info {
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    transition: background-size 1s ease;
-    outline: 3px solid rgb(97, 0, 0);
-    outline-offset: -2px; /* rentre l'outline à l'intérieur */
-}
-
-.Info:hover{
-    background-size: 110%;
-}
-
-#Secondary_News{
-    height : 80vh;
-    width: 80vh;
-    background-color: rgba(255, 0, 0, 0);
-}
-
-#Secondary_News .Info{
-    height: 39vh;
-}
-
-.News_Content{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.News_Text{
-    padding: 1vh;
-    color: white;
-    display: flex;
-    flex-direction: column;   /* ⬅️ IMPORTANT */
-    width: 100%;
-    height: 100%;
-    align-items: flex-start;
-    justify-content: flex-end;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.News_Resume{
-    margin-left: 1vh;
-}
-
-.Type2{
-    padding-top: 3vh;
-    padding-bottom: 3vh;
-    background-color: rgba(0, 0, 0, 0.096);
-}
-
-.ico{
-    width: 30px;
-    height: 30px;
+    border: 3px solid var(--primary-color);
+    cursor: pointer;
+    transition: transform 0.2s;
     position: relative;
-    top: 10px;
 }
 
-.showImg{
+.Info:hover {
+    transform: scale(1.01);
+}
+
+.News_Content {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    align-items: flex-end;
 }
 
-/* ----------------------- */
-/* Responsive pour mobile  */
-/* ----------------------- */
-@media (max-width: 480px) {
-    #Accueil{
-        margin-left: 1vh;
-        margin-right: 1vh;
+.News_Text {
+    padding: 20px;
+    color: white;
+    width: 100%;
+}
+
+.News_Title, .News_Resume {
+    text-align: left;
+    margin: 5px 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.News_Title {
+    font-size: 24px;
+}
+
+.News_Resume {
+    font-size: 16px;
+}
+
+.showImg {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.img {
+    max-width: 45%;
+    height: auto;
+}
+
+#presse {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    border: 2px solid var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    h1, h2, h3, #MainTitle {
+        font-size: 24px;
     }
 
-    #Actus{
-        margin-left: 1vh;
-        margin-right: 1vh;
+    #Accueil, #Actus, #Discover, #Assos, #Boutique, #TalkAboutUs {
+        margin: 0 15px;
     }
 
-    #Discover{
-        margin-left: 1vh;
-        margin-right: 1vh;
-    }
-
-    #Assos{
-        margin-left: 1vh;
-        margin-right: 1vh;
-    }
-
-    #Boutique{
-        margin-left: 1vh;
-        margin-right: 1vh;
-    }
-
-    #TalkAboutUs{
-        margin-left: 1vh;
-        margin-right: 1vh;
+    #header {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
     }
     
-    #News{
-        padding-top: 3vh;
-        padding-bottom: 3vh;
+    .header_element {
         display: flex;
-    	flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
         justify-content: center;
-    }
-    
-    #Main_News{
-        width: 40vh;
-        height: 40vh;
-        margin-bottom: 2vh;
-    }
-    
-    #Secondary_News{
-        width: 40vh;
-    }
-    
-    #Secondary_News .Info{
-        width: 40vh;
-        height: 40vh;
+        gap: 10px;
+        margin-top: 10px;
     }
 
-    #header{
-        background-color: rgb(97, 0, 0);
-        height: 15vh;
-        padding-right: 0vh;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 2vh;
-    }
-    
-    .img{
-        width: 45%;
-    }
-    
-    p{
-        text-align: justify;
-        font-size: 15px;
-    }
-    
-    li{
-        text-align: justify;
-        font-size: 15px;
-    }
-
-    h1{
-        font-size: 50px;
-        text-align: center;
-    }
-
-    h2{
-        font-size: 20px;
-    }
-    
-    .ico{
-        width: 20px;
-        height: 20px;
-        position: relative;
-        top: 5px;
-    }
-
-    #MainTitle{
+    #MainTitle {
         display: none;
+    }
+
+    #News {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Main_News, #Secondary_News {
+        width: 100%;
+        height: 300px;
+    }
+
+    #Secondary_News .Info {
+        height: 140px;
     }
 }

@@ -1,30 +1,37 @@
 <?php
 session_start();
+
 if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== true) {
-    http_response_code(403); // Interdit
-    echo json_encode(['error' => 'Accès refusé']);
-    exit;
+    exit("Accès refusé");
 }
-if(isset($_FILES['fileToUpload'])){
-    $fileName = $_FILES['fileToUpload']['name'];
-    $tmpName  = $_FILES['fileToUpload']['tmp_name'];
 
-    $targetDir = "../../public/uploads/newsTemp/";
-    if(!is_dir($targetDir)) mkdir($targetDir, 0755, true);
+$targetDir = "../../public/uploads/newsTemp/";
+if(!is_dir($targetDir)) mkdir($targetDir, 0755, true);
 
-    // Pour éviter écrasement
-
-    if (file_exists("../../public/uploads/newsTemp/resumeImg.". pathinfo($fileName, PATHINFO_EXTENSION))) {
-        unlink("../../public/uploads/newsTemp/resumeImg.". pathinfo($fileName, PATHINFO_EXTENSION));
+if (isset($_FILES['fileToUpload'])) {
+    $file = $_FILES['fileToUpload'];
+    $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+if (file_exists("../../public/uploads/newsTemp/resumeImg.". pathinfo($fileName, PATHINFO_EXTENSION))) {
+    unlink("../../public/uploads/newsTemp/resumeImg.". pathinfo($fileName, PATHINFO_EXTENSION));
     }
 
-    $newName = "resumeImg." . pathinfo($fileName, PATHINFO_EXTENSION);
-    $targetFile = $targetDir . $newName;
-
-    if(move_uploaded_file($tmpName, $targetFile)){
-        echo $targetFile;
+    if ($file['size'] > 2097152) {
+        echo "Image trop lourde (max 2Mo)";
+        exit;
     }
-} else {
-    echo "Aucun fichier reçu.";
+
+    if (!is_dir($targetDir)) {
+        mkdir($targetDir, 0755, true);
+    }
+
+    array_map('unlink', glob($targetDir . "resumeImg.*"));
+
+    $newName = "resumeImg." . $ext;
+    
+    if (move_uploaded_file($file['tmp_name'], $targetDir . $newName)) {
+        echo "uploads/newsTemp/" . $newName . "?t=" . time();
+    } else {
+        echo "Erreur serveur";
+    }
 }
 ?>

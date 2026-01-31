@@ -1,84 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id = "homepage-name">Geocacheurs Normands</title>
+    <title id="homepage-name">Geocacheurs Normands</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div id = "header">
-        <img src = "assets/img/ui/GNLogo.jpg" id = "MainLogo">
-        <p id = "MainTitle">Les Géocacheurs Normands</p>
-        <div class = "header_element">
-            <button class = "header_button" onclick="Accueil()">Accueil</button>
-            <button class = "header_button">En Savoir Plus</button>
-            <button class = "header_button">Nous Contacter</button>
-            <button class = "header_button" onclick="Connexion()">Connexion</button>
+    <div id="header">
+        <img src="assets/img/ui/GNLogo.jpg" id="MainLogo">
+        <p id="MainTitle">Les Géocacheurs Normands</p>
+        <div class="header_element">
+            <button class="header_button" onclick="Accueil()">Accueil</button>
+            <button class="header_button" onclick="window.location.href='#Assos'">Qui sommes nous ?</button>
+            <button class="header_button" onclick="window.location.href='mailto:Gcncotentin@gmail.com'">Nous Contacter</button>
+            <button class="header_button" onclick="Connexion()">Connexion</button>
         </div>
     </div>
-    <div id = "Accueil">
-        <div class = "HoriSepLine"></div>
+    
+    <div id="Accueil">
+        <div class="HoriSepLine"></div>
         <h1>Accueil</h1>
         <div class = "HoriSepLine"></div>
         <img src="assets/img/ui/AccueilIMG.jpg" class = "IMGFiller">
         <h2>Explorer autrement le Cotentin, un trésor à la fois.</h2>
         <p>Bienvenue sur le site des Géocacheurs Normands du Cotentin, un espace dédié à l’univers
-du géocaching, à la vie de notre association et à toutes les façons d’explorer notre territoire
-autrement. Le géocaching est une aventure grandeur nature, mêlant balade, énigmes et
-découverte du territoire.<br>
-Que vous soyez curieux, débutant ou géocacheur confirmé, vous trouverez ici de quoi
-comprendre le géocaching, suivre notre actualité, participer à nos événements et rejoindre
-une communauté passionnée.</p>
+        du géocaching, à la vie de notre association et à toutes les façons d’explorer notre territoire
+        autrement. Le géocaching est une aventure grandeur nature, mêlant balade, énigmes et
+        découverte du territoire.<br>
+        Que vous soyez curieux, débutant ou géocacheur confirmé, vous trouverez ici de quoi
+        comprendre le géocaching, suivre notre actualité, participer à nos événements et rejoindre
+        une communauté passionnée.</p>
     </div>
-    <div id = "Actus">
-        <div class = "HoriSepLine"></div>
+
+    <div id="Actus">
+        <div class="HoriSepLine"></div>
         <h1>Actus</h1>
-        <div class = "HoriSepLine"></div>
-        <div id = "News">
-            <div id = "Main_News">
-                <div class = "Info" id = "Info1" onclick=sendToPage(1)>
-                    <div class = "News_Content">
-                        <div class = "News_Text">
-                            <h3 class = "News_Title" id = "NewsTitle1">Titre</h1>
-                            <p class = "News_Resume" id = "NewsResume1">Ceci est un résumé de la dernière info !</p>
+        <div class="HoriSepLine"></div>
+        <div id="News">
+            <div id="Main_News">
+                <div class="Info" id="Info1" onclick="sendToPage(1)">
+                    <div class="News_Content">
+                        <div class="News_Text">
+                            <h3 class="News_Title" id="NewsTitle1">Titre</h3>
+                            <p class="News_Resume" id="NewsResume1">Ceci est un résumé de la dernière info !</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class = "Vertical_Sep"></div>
-            <div id = "Secondary_News">
-                <div class = "Info" id = "Info2" onclick=sendToPage(2)>
-                    <div class = "News_Content">
-                        <div class = "News_Text">
-                            <h3 class = "News_Title" id = "NewsTitle2">Titre</h1>
-                            <p class = "News_Resume" id = "NewsResume2">Ceci est un résumé de la dernière info !</p>
+            <div class="Vertical_Sep"></div>
+            <div id="Secondary_News">
+                <div class="Info" id="Info2" onclick="sendToPage(2)">
+                    <div class="News_Content">
+                        <div class="News_Text">
+                            <h3 class="News_Title" id="NewsTitle2">Titre</h3>
+                            <p class="News_Resume" id="NewsResume2">Ceci est un résumé de la dernière info !</p>
                         </div>
                     </div>
                 </div>
-                <div class = "Horizontal_Sep"></div>
-                <div class = "Info" id = "Info3" onclick=sendToPage(3)>
-                    <div class = "News_Content">
-                        <div class = "News_Text">
-                            <h3 class = "News_Title" id = "NewsTitle3">Titre</h1>
-                            <p class = "News_Resume" id = "NewsResume3">Ceci est un résumé de la dernière info !</p>
+                <div class="Horizontal_Sep"></div>
+                <div class="Info" id="Info3" onclick="sendToPage(3)">
+                    <div class="News_Content">
+                        <div class="News_Text">
+                            <h3 class="News_Title" id="NewsTitle3">Titre</h3>
+                            <p class="News_Resume" id="NewsResume3">Ceci est un résumé de la dernière info !</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id = "Discover">
-        <div class = "HoriSepLine"></div>
+
+    <div id="Discover">
+        <div class="HoriSepLine"></div>
         <h1>Découvrir le Géocaching</h1>
-        <div class = "HoriSepLine"></div>
-        <h2>Une chasse au trésor moderne, gratuite, pour tous !</h2>
+        <div class="HoriSepLine"></div>
+        <h2>Une chasse au trésor moderne, gratuite, pour tous !</h2>
         <p>Le géocaching est une chasse au trésor grandeur nature, accessible à tous, petits et grands,
-et praticable toute l’année.<br>
-À l’aide d’un smartphone ou d’un GPS, les joueurs partent à la recherche de boîtes
-dissimulées dans la nature, en ville ou à proximité de sites remarquables.<br>
-Le vrai trésor ? Prendre l’air, se promener, découvrir des lieux insolites, partager
-un moment ludique.</p>
+        et praticable toute l’année.<br>
+        À l’aide d’un smartphone ou d’un GPS, les joueurs partent à la recherche de boîtes
+        dissimulées dans la nature, en ville ou à proximité de sites remarquables.<br>
+        Le vrai trésor ? Prendre l’air, se promener, découvrir des lieux insolites, partager
+        un moment ludique.</p>
+        
         <h2>Que trouve-t-on dans une géocache ?</h2>
         <p>Une géocache est généralement une boîte étanche contenant :</p>
         <ul>
@@ -87,7 +91,8 @@ un moment ludique.</p>
             <li>Parfois des objets voyageurs (Travel Bugs, géocoins).</li>
         </ul>
         <p>Une fois la cache trouvée, on signe le logbook, on remet tout soigneusement en place… et
-on partage son aventure en ligne.</p>
+        on partage son aventure en ligne.</p>
+        
         <h2>Comment commencer le géocaching ?</h2>
         <p>Rien de plus simple !</p>
         <ul>
@@ -97,6 +102,7 @@ on partage son aventure en ligne.</p>
             <li>Choisissez une cache et partez à l’aventure !</li>
         </ul>
         <p>Pour aller plus loin, le site officiel est accessible sur <a href="https://www.geocaching.com" target="_blank">geocaching.com</a></p>
+        
         <h2>Comment se déroule une recherche ?</h2>
         <ol>
             <li>Choisissez une géocache à proximité en consultant la carte</li>
@@ -108,6 +114,7 @@ on partage son aventure en ligne.</p>
             <li>Enregistrez votre découverte sur l’application (log)</li>
         </ol>
         <p>Un petit message ou une photo pour remercier le placeur est toujours apprécié !</p>
+        
         <h2>Les différents types de géocaches</h2>
         <p>Il existe plusieurs types de géocaches, reconnaissables grâce à leur icône :</p>
         <ul>
@@ -117,30 +124,32 @@ on partage son aventure en ligne.</p>
             <li>EarthCache : pas de boîte, mais des questions sur la géologie du lieu <img src="assets/img/icons/earthIco.svg" class="ico"></li>
             <li>Event : une rencontre entre géocacheurs à une date et une heure données <img src="assets/img/icons/eventIco.svg" class="ico"></li>
         </ul>
+        
         <h2>Les objets voyageurs (Travel Bugs et géocoins)</h2>
         <div class = "showImg">
             <img class = "img" src="assets/img/ui/travelbug.jpg">
             <img class = "img" src="assets/img/ui/geocoin.png">
         </div>
         <p>Certaines caches contiennent des objets identifiés par un code unique.<br>
-Leur objectif ? Voyager de cache en cache, parfois autour du monde, pour accomplir
-une mission.<br>
-Il suffit d’enregistrer leur passage dans l’application et de les déposer dans une autre
-géocache.</p>
+        Leur objectif ? Voyager de cache en cache, parfois autour du monde, pour accomplir
+        une mission.<br>
+        Il suffit d’enregistrer leur passage dans l’application et de les déposer dans une autre
+        géocache.</p>
+        
         <h2>Version gratuite ou Premium ?</h2>
         <p>Le géocaching est accessible gratuitement.<br><br>
-
-La version gratuite permet de découvrir les caches les plus simples.<br>
-La version Premium (environ 30 € / an) donne accès à :</p>
+        La version gratuite permet de découvrir les caches les plus simples.<br>
+        La version Premium (environ 30 € / an) donne accès à :</p>
         <ul>
             <li>toutes les géocaches,</li>
             <li>des filtres avancés,</li>
             <li>des outils de navigation plus complets.</li>
         </ul>
         <p>Elle est recommandée pour profiter pleinement de l’activité.</p>
+        
         <h2>Une pratique respectueuse de la nature</h2>
         <p>Le géocaching repose sur le respect des lieux et de l’environnement.<br>
-Les géocacheurs sont encouragés à :</p>
+        Les géocacheurs sont encouragés à :</p>
         <ul>
             <li>rester discrets,</li>
             <li>respecter la faune et la flore,</li>
@@ -148,23 +157,26 @@ Les géocacheurs sont encouragés à :</p>
             <li>remettre les caches en place,</li>
             <li>ramasser les déchets rencontrés (principe CITO – Cache In Trash Out).</li>
         </ul>
+        
         <h2>Et le géocaching sans boîte ?</h2>
         <p>Il existe aussi une forme de géocaching sans contenant :<br>
-&#9656; les Adventure Labs®.<br>
-Ces parcours interactifs permettent de découvrir un lieu à travers des questions et des
-étapes, directement depuis son smartphone.</p>
+        &#9656; les Adventure Labs®.<br>
+        Ces parcours interactifs permettent de découvrir un lieu à travers des questions et des
+        étapes, directement depuis son smartphone.</p>
     </div>
-    <div id = "Assos">
-        <div class = "HoriSepLine"></div>
+
+    <div id="Assos">
+        <div class="HoriSepLine"></div>
         <h1>Découvrir l'association Les Géocacheurs Normands du Cotentin</h1>
-        <div class = "HoriSepLine"></div>
+        <div class="HoriSepLine"></div>
         <h2>Qui sommes-nous ?</h2>
         <p>Les Géocacheurs Normands du Cotentin est une association loi 1901 créée le 25 janvier
-2019, qui rassemble des passionnés de géocaching souhaitant partager, développer et faire
-connaître cette activité sur le territoire du Cotentin.<br>
-Notre association a pour vocation de promouvoir le géocaching comme un loisir accessible à
-tous, favorisant la découverte du patrimoine naturel, historique et culturel, tout en
-encourageant une pratique respectueuse de l’environnement.</p>
+        2019, qui rassemble des passionnés de géocaching souhaitant partager, développer et faire
+        connaître cette activité sur le territoire du Cotentin.<br>
+        Notre association a pour vocation de promouvoir le géocaching comme un loisir accessible à
+        tous, favorisant la découverte du patrimoine naturel, historique et culturel, tout en
+        encourageant une pratique respectueuse de l’environnement.</p>
+        
         <h2>Nos objectifs</h2>
         <p>Conformément à nos statuts, l’association a pour objectifs de :</p>
         <ul>
@@ -175,6 +187,7 @@ encourageant une pratique respectueuse de l’environnement.</p>
             <li>sensibiliser au respect de la nature et des sites,</li>
             <li>fédérer les géocacheurs locaux autour de projets communs.</li>
         </ul>
+        
         <h2>Nos actions concrètes</h2>
         <ul>
             <li>Organisation d’events géocaching (rencontres, sorties thématiques, événements annuels)</li>
@@ -183,6 +196,7 @@ encourageant une pratique respectueuse de l’environnement.</p>
             <li>Participation aux opérations Cache In Trash Out (CITO)</li>
             <li>Soutien logistique aux géocacheurs et aux événements du territoire</li>
         </ul>
+        
         <h2>Adhérer à l’association</h2>
         <p>Adhérer, c’est :</p>
         <ul>
@@ -191,14 +205,16 @@ encourageant une pratique respectueuse de l’environnement.</p>
             <li>partager des moments conviviaux entre passionnés,</li>
             <li>contribuer à la promotion du géocaching dans le Cotentin.</li>
         </ul>
-        <p>&#9656; <a href ="https://www.helloasso.com/associations/les-geocacheurs-normands-du-cotentin/adhesions/adhesion-geocacheurs-normands-du-cotentin-1-an" target="_blank">Lien vers la page d’adhésion</a></p>
+        <p>&#9656; <a href="https://www.helloasso.com/associations/les-geocacheurs-normands-du-cotentin/adhesions/adhesion-geocacheurs-normands-du-cotentin-1-an" target="_blank">Lien vers la page d’adhésion</a></p>
     </div>
-    <div id = "Boutique">
-        <div class = "HoriSepLine"></div>
-        <h1><a href = "https://www.helloasso.com/associations/les-geocacheurs-normands-du-cotentin/boutiques/travelbug-geocacheur-normand" target="_blank">Boutique</a></h1>
-        <div class = "HoriSepLine"></div>
+
+    <div id="Boutique">
+        <div class="HoriSepLine"></div>
+        <h1><a href="https://www.helloasso.com/associations/les-geocacheurs-normands-du-cotentin/boutiques/travelbug-geocacheur-normand" target="_blank">Boutique</a></h1>
+        <div class="HoriSepLine"></div>
     </div>
-    <div id = "TalkAboutUs">
+
+    <div id="TalkAboutUs">
         <h1>On parle de Nous</h1>
         <div class = "HoriSepLine"></div>
         <img src = "assets/img/ui/presse.jpg" id = "presse">
