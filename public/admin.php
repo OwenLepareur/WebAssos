@@ -14,24 +14,7 @@
         exit;
     }
     ?>
-    <div id = "header">
-        <div class = "header_element">
-
-        </div>
-        <div class = "header_element">
-            <button class = "header_button" onclick="Accueil()">Accueil</button>
-            <button class = "header_button">En Savoir Plus</button>
-            <button class = "header_button">Nous Contacter</button>
-            <div class="dropdown">
-                <button class="dropbtn">Paramètres</button>
-                <div class="dropdown-content">
-                    <a href="addNews.php">Nouvelle News</a>
-                    <a href="index.html">Retour au Site</a>
-                    <a href="logout.php">Déconnexion</a>
-                </div>
-            </div>
-        </div>
-    </div>
+	<?php include_once __DIR__ . "/../app/includes/header.php"; ?>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <div id = "Analytics">
         <canvas id="visitsChart" width="80vh"></canvas>
