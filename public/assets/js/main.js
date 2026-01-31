@@ -11,11 +11,3 @@ function sendToPage(NewsPage) {
         window.open(urlNews3, "_self")
 }
 
-function Connexion() {
-    window.location.href = "index.php";
-}
-
-function Accueil() {
-    window.location.href = "index.html";
-}
-

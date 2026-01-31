@@ -7,19 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div id="header">
-		<div class="header-left">
-			<img src="assets/img/ui/viking.png" id="MainLogo">
-			<p id="MainTitle">Les Géocacheurs Normands</p>
-		</div>
-
-        <div class="header_element">
-            <button class="header_button" onclick="Accueil()">Accueil</button>
-            <button class="header_button" onclick="window.location.href='#Assos'">Qui sommes nous ?</button>
-            <button class="header_button" onclick="window.location.href='mailto:Gcncotentin@gmail.com'">Nous Contacter</button>
-            <button class="header_button" onclick="Connexion()">Connexion</button>
-        </div>
-    </div>
+	<?php include_once __DIR__ . "/../app/includes/header.php"; ?>
     
     <div id="Accueil">
         <div class="HoriSepLine"></div>
