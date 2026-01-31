@@ -161,7 +161,7 @@ $isAdmin = isset($_SESSION['admin']) && $_SESSION['admin'] === true;
 
         <?php if ($isAdmin): ?>
             <button class="header_button" onclick="window.location.href='index.php'">Accueil</button>
-            <button class="header_button" onclick="window.location.href='index.php#Assos'">Qui sommes nous ?</button>
+            <button class="header_button" onclick="scrollToElement('Assos', -30)">Qui sommes nous ?</button>
             <button class="header_button" onclick="window.location.href='mailto:Gcncotentin@gmail.com'">Nous Contacter</button>
             
             <div class="dropdown">

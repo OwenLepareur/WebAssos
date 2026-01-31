@@ -85,8 +85,8 @@
 
         <div class="footer-section">
             <h3>Liens Utiles</h3>
-            <a href="index.php">Accueil</a>
-            <a href="index.php#Assos">L'Association</a>
+            <a href="accueil.php">Accueil</a>
+            <a href="accueil.php#Assos">L'Association</a>
             <a href="mailto:Gcncotentin@gmail.com">Nous contacter</a>
             <a href="login.php">Espace Admin</a>
         </div>
