@@ -9,13 +9,13 @@ if(isset($_FILES['fileToUpload'])){
     $fileName = $_FILES['fileToUpload']['name'];
     $tmpName  = $_FILES['fileToUpload']['tmp_name'];
 
-    $targetDir = "uploads/newsTemp/";
+    $targetDir = "../../public/uploads/newsTemp/";
     if(!is_dir($targetDir)) mkdir($targetDir, 0755, true);
 
     // Pour éviter écrasement
 
-    if (file_exists("uploads/newsTemp/resumeImg.". pathinfo($fileName, PATHINFO_EXTENSION))) {
-        unlink("uploads/newsTemp/resumeImg.". pathinfo($fileName, PATHINFO_EXTENSION));
+    if (file_exists("../../public/uploads/newsTemp/resumeImg.". pathinfo($fileName, PATHINFO_EXTENSION))) {
+        unlink("../../public/uploads/newsTemp/resumeImg.". pathinfo($fileName, PATHINFO_EXTENSION));
     }
 
     $newName = "resumeImg." . pathinfo($fileName, PATHINFO_EXTENSION);

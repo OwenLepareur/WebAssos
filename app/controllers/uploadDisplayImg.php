@@ -11,7 +11,7 @@ if(isset($_FILES['fileToUpload'])){
     $id = $_POST['valeur'];
     $ref = $_POST['ref'];
 
-    $targetDir = "uploads/newsTemp/";
+    $targetDir = "../../public/uploads/newsTemp/";
     if(!is_dir($targetDir)) mkdir($targetDir, 0755, true);
 
     // Pour éviter écrasement

@@ -1,5 +1,5 @@
 <?php
-$dir = "uploads/newsTemp";
+$dir = "../../public/uploads/newsTemp";
 $files = glob($dir . "*.{jpg,jpeg,png,gif,webp}", GLOB_BRACE);
 
 if (!empty($files)) {

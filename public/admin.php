@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Assets/CSS/Dashboard.css">
+    <link rel="stylesheet" href="assets/css/Dashboard.css">
     <title>Document</title>
 </head>
 <body>
@@ -26,7 +26,7 @@
                 <button class="dropbtn">Paramètres</button>
                 <div class="dropdown-content">
                     <a href="addNews.php">Nouvelle News</a>
-                    <a href="../Blog Page/index.html">Retour au Site</a>
+                    <a href="index.html">Retour au Site</a>
                     <a href="logout.php">Déconnexion</a>
                 </div>
             </div>
@@ -36,7 +36,7 @@
     <div id = "Analytics">
         <canvas id="visitsChart" width="80vh"></canvas>
     </div>
-    <script src="../Main Assets/script.js"></script>
-    <script src="Assets/JS/AdminHomePage.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/AdminHomePage.js"></script>
 </body>
 </html>

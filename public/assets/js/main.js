@@ -12,10 +12,10 @@ function sendToPage(NewsPage) {
 }
 
 function Connexion() {
-    window.location.href = "../Admin Page/index.php";
+    window.location.href = "index.php";
 }
 
 function Accueil() {
-    window.location.href = "../Blog Page/index.html";
+    window.location.href = "index.html";
 }
 

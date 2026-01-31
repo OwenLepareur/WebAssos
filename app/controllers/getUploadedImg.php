@@ -1,5 +1,5 @@
 <?php
-$dir = "uploads/newsTemp";
+$dir = "../../public/uploads/newsTemp";
 $id = $_POST['valeur'] ?? null;
 
 if (!$id) {

@@ -11,7 +11,7 @@ if (!isset($_SESSION['admin'])) {
     exit("Accès refusé");
 }
 
-$dir = 'uploads/newsTemp';
+$dir = '../../public/uploads/newsTemp';
 
 if (is_dir($dir)) {
     $files = glob($dir . '*');

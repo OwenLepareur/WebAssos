@@ -1,5 +1,5 @@
-const TRACK_URL = "visitPerDay.php";
-const GET_URL = "getVisits.php";
+const TRACK_URL = "app/controllers/visitPerDay.php";
+const GET_URL = "app/controllers/getVisits.php";
 
 // 2️⃣ On récupère les visites et on complète les jours manquants
 async function fetchVisits() {

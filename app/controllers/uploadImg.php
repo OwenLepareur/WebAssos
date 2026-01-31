@@ -9,7 +9,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$targetDir = "uploads/newsTemp/";
+$targetDir = "../../public/uploads/newsTemp/";
 if(!is_dir($targetDir) && !mkdir($targetDir, 0755, true)) {
     http_response_code(500);
     exit("Impossible de créer le dossier");

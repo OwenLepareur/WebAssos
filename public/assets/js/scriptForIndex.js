@@ -18,7 +18,7 @@ async function getImagePath(basePath) {
 
 async function trackVisit() {
     try {
-        const res = await fetch("../Admin Page/visitPerDay.php"); // chemin vers ton PHP
+        const res = await fetch("../../../app/controllers/visitPerDay.php"); // chemin vers ton PHP
         const text = await res.text(); // récupère le message du PHP
         console.log(text);
     } catch (err) {
@@ -29,9 +29,9 @@ async function trackVisit() {
 async function News_Load() {
     try {
         // Récupération des données
-        const News1List = await (await fetch("../Admin Page/getNews.php")).json();
-        const News2List = await (await fetch("../Admin Page/getNews2.php")).json();
-        const News3List = await (await fetch("../Admin Page/getNews3.php")).json();
+        const News1List = await (await fetch("../../../app/controllers/getNews.php")).json();
+        const News2List = await (await fetch("../../../app/controllers/getNews2.php")).json();
+        const News3List = await (await fetch("../../../app/controllers/getNews3.php")).json();
 
         // Sélection de la première news si elle existe
         const News1 = News1List[0] || null;
@@ -39,7 +39,7 @@ async function News_Load() {
         const News3 = News3List[0] || null;
 
         // Fonction utilitaire pour obtenir chemin complet avec cache-buster
-        const getImgUrl = (folder, img) => img ? `../Admin Page/uploads/${folder}/${img}?t=${Date.now()}` : "";
+        const getImgUrl = (folder, img) => img ? `uploads/${folder}/${img}?t=${Date.now()}` : "";
 
         // Couleur moyenne
         const color1 = News1 ? await getAverageColor(getImgUrl("news1", News1.imgpath)) : {r:255,g:255,b:255};
@@ -103,7 +103,7 @@ function getAverageColor(imagePath) {
 
 async function trackVisit() {
     try {
-        await fetch("../Admin Page/visitPerDay.php");
+        await fetch("../../../app/controllers/visitPerDay.php");
         console.log("Visite enregistrée !");
     } catch (e) {
         console.error("Erreur lors du tracking :", e);

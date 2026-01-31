@@ -26,7 +26,7 @@ function copyDir($src, $dst) {
 }
 
 // 🔥 NORMALISATION CRITIQUE
-$baseDir = realpath(__DIR__ . "/uploads");
+$baseDir = "../../public/uploads/";
 if (!$baseDir) {
     die("uploads introuvable");
 }

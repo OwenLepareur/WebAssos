@@ -11,7 +11,7 @@ $error = isset($_GET["error"]);
 <head>
     <meta charset="UTF-8">
     <title>Connexion Admin</title>
-    <link rel="stylesheet" href="Assets/CSS/Login.css">
+    <link rel="stylesheet" href="assets/css/Login.css">
 </head>
 <body>
     <div id = "LoginFrame">

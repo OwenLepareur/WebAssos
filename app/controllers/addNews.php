@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Assets/CSS/AddNews.css">
+    <link rel="stylesheet" href="../../public/assets/css/AddNews.css">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -11,7 +11,7 @@
     <?php
     session_start();
     if (!isset($_SESSION["admin"])) {
-        header("Location: index.php");
+        header("Location: ../../public/index.php");
         exit;
     }
     ?>
@@ -79,6 +79,6 @@
     </div>
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 
-    <script src="Assets/JS/AdminNews.js"></script>
+    <script src="../../public/assets/js/AdminNews.js"></script>
 </body>
 </html>

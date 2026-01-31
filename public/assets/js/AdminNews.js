@@ -1,6 +1,6 @@
 function GiveUpNews() {
-    fetch('delete.php', { method: 'POST' });
-    window.location.href = "../Admin Page/index.php";
+    fetch('app/controllers/delete.php', { method: 'POST' });
+    window.location.href = "index.php";
 }
 
 function displayImage(event) {
@@ -9,7 +9,7 @@ function displayImage(event) {
     if(input.files.length > 0){
         const fileName = input.files[0].name;
     }
-    let img = document.createElement("../uploads" . fileName);
+    let img = document.createElement("uploads" . fileName);
     img.src = src;
     img.width = width;
     img.height = height;
@@ -22,7 +22,7 @@ function wait(ms) {
 }
 
 async function uploadImage() {
-    fetch('delete.php', { method: 'POST' });
+    fetch('app/controllers/delete.php', { method: 'POST' });
     const input = document.getElementById('fileToUpload');
     const frame = document.getElementById('Info1');
 
@@ -38,7 +38,7 @@ async function uploadImage() {
 
     try {
         // Upload du fichier
-        const response = await fetch("upload.php", {
+        const response = await fetch("app/controllers/upload.php", {
             method: "POST",
             body: formData
         });
@@ -186,7 +186,7 @@ async function ChangeImg(value) {
         formData.append("valeur", value);
 
         try {
-            const res = await fetch("uploadImg.php", {
+            const res = await fetch("app/controllers/uploadImg.php", {
                 method: "POST",
                 body: formData
             });
@@ -256,7 +256,7 @@ function AddImgOnLeft() {
     HoriSep.className = "HoriSep";
 
     const img = document.createElement('img');
-    img.src = "../Blog Page/Assets/Images/News1.jpg";
+    img.src = "uploads/news/News1.jpg";
     img.id = String(countDiv) + "Display";
     img.className = "BlogImg"
     img.onclick= () => ChangeImg(parseInt(img.id, 10));
@@ -308,7 +308,7 @@ function AddImgOnRight() {
     HoriSep.className = "HoriSep";
 
     const img = document.createElement('img');
-    img.src = "../Blog Page/Assets/Images/News1.jpg";
+    img.src = "uploads/news/News1.jpg";
     img.id = String(countDiv) + "Display";
     img.className = "BlogImg"
     img.onclick= () => ChangeImg(parseInt(img.id, 10));
@@ -392,7 +392,7 @@ function UpgradeRef(id, ImgDisplay, max) {
         ImgDisplay.dataset.value = 1;
     }
 
-    ImgDisplay.src = "uploads/" + id + ImgDisplay.dataset.value + ".png";
+    ImgDisplay.src = "uploads/newsTemp/" + id + ImgDisplay.dataset.value + ".png";
 }
 
 function uploadImgDisplay(value, div, max) {
@@ -423,7 +423,7 @@ function uploadImgDisplay(value, div, max) {
         formData.append("ref", div.dataset.value);
 
         try {
-            await fetch("uploadDisplayImg.php", {
+            await fetch("app/controllers/uploadDisplayImg.php", {
                 method: "POST",
                 body: formData
             });
@@ -432,7 +432,7 @@ function uploadImgDisplay(value, div, max) {
             valueIdData.append("valeur", value);
             valueIdData.append("ref", div.dataset.value);
 
-            const res = await fetch("getUploadedImgDisplay.php", {
+            const res = await fetch("app/controllers/getUploadedImgDisplay.php", {
                 method: "POST",
                 body: valueIdData
             });
@@ -463,7 +463,7 @@ function uploadImgDisplay(value, div, max) {
 
 async function rotateNewsTables() {
     try {
-        const response = await fetch("rotateNewsTables.php");
+        const response = await fetch("app/controllers/rotateNewsTables.php");
         const text = await response.text();
         console.log("Résultat :", text);
         return true;
@@ -479,7 +479,7 @@ async function sendElement(type, content = null, imgpath = null) {
     if (content) formData.append("content", content);
     if (imgpath) formData.append("imgpath", imgpath);
 
-    const res = await fetch("saveNews.php", {
+    const res = await fetch("app/controllers/saveNews.php", {
         method: "POST",
         body: formData
     });
@@ -551,7 +551,7 @@ async function sendNewsFromDivs() {
             await sendElement(type, content, imgpath);
         }
 
-        await fetch("rotateNewsFolders.php");
+        await fetch("app/controllers/rotateNewsFolders.php");
 
         alert("Toutes les news ont été envoyées !");
         window.location.href = "admin.php";

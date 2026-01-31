@@ -6,13 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
 async function loadNews(News) {
     try {
         // Fonction utilitaire pour générer le chemin complet d'une image avec cache-buster
-        const getImgUrl = (folder, img) => img ? `../Admin Page/uploads/${folder}/${img}?t=${Date.now()}` : "";
+        const getImgUrl = (folder, img) => img ? `uploads/${folder}/${img}?t=${Date.now()}` : "";
 
         // Choix du fichier PHP selon la news
         const fileMap = {
-            News1: "../Admin Page/getNews.php",
-            News2: "../Admin Page/getNews2.php",
-            News3: "../Admin Page/getNews3.php"
+            News1: "../app/controllers/getNews.php",
+            News2: "../app/controllers/getNews2.php",
+            News3: "../app/controllers/getNews3.php"
         };
 
         const res = await fetch(fileMap[News]);
