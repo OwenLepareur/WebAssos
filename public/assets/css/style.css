@@ -1,4 +1,3 @@
-/* --- RESET & VARIABLES --- */
 :root {
     --primary-color: rgb(97, 0, 0);
     --bg-color: rgb(235, 215, 205);
@@ -9,13 +8,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--bg-color);
-    font-family: Arial, sans-serif; /* Police par défaut propre */
+    font-family: Arial, sans-serif;
 }
 
-/* --- TYPOGRAPHIE UNIFIÉE --- */
-/* Ici on règle le problème : TOUS les titres ont la même taille */
 h1, h2, h3, #MainTitle {
-    font-size: 32px; /* Taille unique pour Ordi */
+    font-size: 32px;
     font-weight: bold;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
@@ -23,11 +20,20 @@ h1, h2, h3, #MainTitle {
     margin: 20px 0;
 }
 
-/* Cas particulier : Titre du Header en blanc */
 #MainTitle {
     color: var(--text-white);
     margin: 0;
     padding-left: 20px;
+}
+
+#Discover h2 {
+    font-size: 22px;
+    font-weight: normal;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
 }
 
 p, li {
@@ -42,7 +48,6 @@ a {
     text-decoration: none;
 }
 
-/* --- ÉLÉMENTS GRAPHIQUES --- */
 .HoriSepLine {
     width: 100%;
     height: 5px;
@@ -63,10 +68,9 @@ a {
     margin-left: 10px;
 }
 
-/* --- HEADER --- */
 #header {
     background-color: var(--primary-color);
-    height: 120px; /* Fixe pour éviter les sauts */
+    height: 120px;
     padding: 0 5vh;
     display: flex;
     align-items: center;
@@ -103,13 +107,11 @@ a {
     color: var(--primary-color);
 }
 
-/* --- SECTIONS --- */
 #Accueil, #Actus, #Discover, #Assos, #Boutique, #TalkAboutUs {
-    margin: 0 10vh; /* Marge unifiée */
+    margin: 0 10vh;
     padding-bottom: 30px;
 }
 
-/* --- NEWS (GRID SYSTEM) --- */
 #News {
     display: flex;
     justify-content: center;
@@ -131,14 +133,13 @@ a {
 }
 
 #Secondary_News .Info {
-    height: 48%; /* Pour laisser un petit espace au milieu */
+    height: 48%;
 }
 
-/* Style des cartes News */
 .Info {
     width: 100%;
     height: 100%;
-    background-color: #ddd; /* Couleur de fond si pas d'image */
+    background-color: #ddd;
     background-size: cover;
     background-position: center;
     border: 3px solid var(--primary-color);
@@ -166,15 +167,20 @@ a {
 }
 
 .News_Title, .News_Resume {
-    text-align: left; /* Exception pour les news */
+    text-align: left;
     margin: 5px 0;
-    color: white; /* Force le blanc */
-    font-family: Arial, sans-serif; /* Plus lisible pour les résumés */
+    color: white;
+    font-family: Arial, sans-serif;
 }
-.News_Title { font-size: 24px; }
-.News_Resume { font-size: 16px; }
 
-/* --- AUTRES --- */
+.News_Title {
+    font-size: 24px;
+}
+
+.News_Resume {
+    font-size: 16px;
+}
+
 .showImg {
     display: flex;
     justify-content: center;
@@ -194,20 +200,15 @@ a {
     border: 2px solid var(--primary-color);
 }
 
-/* --- MOBILE (RESPONSIVE) --- */
 @media (max-width: 768px) {
-    
-    /* On réduit la taille des titres sur mobile, mais ils restent UNIFORMES */
     h1, h2, h3, #MainTitle {
         font-size: 24px;
     }
 
-    /* Marges réduites */
     #Accueil, #Actus, #Discover, #Assos, #Boutique, #TalkAboutUs {
         margin: 0 15px;
     }
 
-    /* Header empilé */
     #header {
         height: auto;
         flex-direction: column;
@@ -223,10 +224,9 @@ a {
     }
 
     #MainTitle {
-        display: none; /* Souvent trop long sur mobile */
+        display: none;
     }
 
-    /* News en colonne */
     #News {
         flex-direction: column;
         align-items: center;
@@ -238,6 +238,6 @@ a {
     }
 
     #Secondary_News .Info {
-        height: 140px; /* Plus petit sur mobile */
+        height: 140px;
     }
 }
