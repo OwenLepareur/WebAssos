@@ -16,4 +16,5 @@
     <script src="assets/js/scriptForNews.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+<?php include_once __DIR__ . '/../app/includes/footer.php'; ?>
 </html>

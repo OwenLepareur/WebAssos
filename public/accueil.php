@@ -213,4 +213,6 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/scriptForIndex.js"></script>
 </body>
+
+<?php include_once __DIR__ . '/../app/includes/footer.php'; ?>
 </html>
