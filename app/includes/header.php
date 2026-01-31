@@ -161,14 +161,14 @@ $isAdmin = isset($_SESSION['admin']) && $_SESSION['admin'] === true;
 
         <?php if ($isAdmin): ?>
             <button class="header_button" onclick="window.location.href='index.php'">Accueil</button>
-            <button class="header_button">En Savoir Plus</button>
+            <button class="header_button" onclick="window.location.href='index.php#Assos'">Qui sommes nous ?</button>
             <button class="header_button" onclick="window.location.href='mailto:Gcncotentin@gmail.com'">Nous Contacter</button>
             
             <div class="dropdown">
                 <button class="header_button dropbtn">Paramètres ▼</button>
                 <div class="dropdown-content">
                     <a href="addNews.php">Nouvelle News</a>
-                    <a href="index.php">Retour au Site</a>
+                    <a href="index.php">Page admin</a>
                     <a href="logout.php">Déconnexion</a>
                 </div>
             </div>
