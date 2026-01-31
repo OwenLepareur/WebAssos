@@ -1,10 +1,4 @@
 <?php
-session_start();
-if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== true) {
-    http_response_code(403); // Interdit
-    echo json_encode(['error' => 'Accès refusé']);
-    exit;
-}
 try {
     $pdo = new PDO(
         "mysql:host=sql208.yzz.me;dbname=yzzme_40864960_admins;charset=utf8mb4",
