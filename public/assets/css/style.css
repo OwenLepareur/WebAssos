@@ -26,7 +26,7 @@ h1, h2, h3, #MainTitle {
     padding-left: 20px;
 }
 
-#Discover, #Assos h2 {
+#Discover h2, #Assos h2 {
     font-size: 22px;
     font-weight: normal;
     font-family: Arial, sans-serif;
